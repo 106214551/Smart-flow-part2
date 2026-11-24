@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!--
+  about.html - About Us page
+  Group: G02 - Smart City Infrastructure Consultancy (Smart-flow)
+  Author: Khadija Boussaha (106237257)
+  Description: Introduces the team: group and class details, each member's
+               contribution and quote, the group photo and a fun facts table.
+-->
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="Learn about Smart-flow, its team and its smart city infrastructure focus." name="description" />
+  <meta content="about us, team, Smart-flow, G02, smart city, COS10026" name="keywords" />
+  <meta content="Khadija Boussaha" name="author" />
+  <title>About | Smart-flow</title>
+  <!-- External CSS: shared site styles, then the About page's own styles -->
+  <link href="css/styles.css" rel="stylesheet" />
+  <link href="css/about.css" rel="stylesheet" />
+  <!-- Embedded CSS example: limited page-specific styling; shared styles stay external. -->
+  <style>
+    .member-card dd strong {
+      color: #087f88;
+    }
+
+    /* Skip link: hidden off screen until a keyboard user tabs to it */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      left: 1rem;
+      top: 1rem;
+      z-index: 100;
+      padding: .5rem 1rem;
+      background: #ffffff;
+      color: #102b4d;
+      border-radius: .5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Skip link lets keyboard and screen-reader users jump past the menu -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <!-- Shared header and navigation (same on every page) -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a aria-label="Smart-flow home" class="brand" href="index.html">
+        <img alt="Smart-flow logo" height="54" src="images/smartflow.jpeg" width="54" />
+        <span class="brand-copy"><strong>Smart<span>-flow</span></strong><small>Smarter Cities. Better
+            Living.</small></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="apply.html">Apply</a></li>
+          <li><a aria-current="page" class="active" href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container page-main about-page" id="main-content">
+    <!-- Hero banner introducing the company -->
+    <section aria-labelledby="about-title" class="page-hero">
+      <!-- Inline CSS example -->
+      <p class="eyebrow" style="margin-bottom: 0.8rem;">ABOUT SMART-FLOW</p>
+      <h1 id="about-title">Smarter systems.<br /><span>Stronger communities.</span></h1>
+      <p>Smart-flow is a smart city infrastructure consultancy focused on connected transport, energy monitoring and
+        practical urban services.</p>
+    </section><!-- Group details: NESTED LIST (brief requirement) -->
+    <section aria-labelledby="group-heading" class="content-section about-group-section">
+      <h2 id="group-heading">Our Group</h2>
+      <ul class="group-info">
+        <li><strong>Group name:</strong> G02 - Smart Flow</li>
+        <li><strong>Class details:</strong>
+          <ul>
+            <li>Sunday: 9:00 am to 10:30 am</li>
+            <li>Tuesday: 9:00 am to 11:00 am</li>
+            <li>Tutor: Dr Hamada</li>
+          </ul>
+        </li>
+      </ul>
+    </section><!-- Members: DEFINITION LIST with contributions and quotes (brief requirement) -->
+    <section aria-labelledby="members-heading" class="content-section about-members-section">
+      <h2 id="members-heading">Members, Contributions and Quotes</h2>
+      <dl class="members">
+        <div class="member-card">
+          <dt>Mohammed Sami Aljattal <span class="student-id">106218087</span></dt>
+          <dd><strong>Contribution:</strong> Home page (index.html) and its CSS, including the background graphic,
+            merged-cell table, search box and footer links.</dd>
+          <dd>
+            <blockquote dir="rtl" lang="ar-QA">
+              <p>الحلم ما له حدود، وكل خطوة صغيرة تقربني من مستقبلي.</p>
+            </blockquote>
+            <p class="translation">Translation (Qatari Arabic): "Dreams have no limits, and every small step brings me
+              closer to my future."</p>
+          </dd>
+        </div>
+        <div class="member-card">
+          <dt>Malik Al Badri <span class="student-id">106195601</span></dt>
+          <dd><strong>Contribution:</strong> Jobs page (jobs.html) and its CSS, including job research and the floated
+            aside.</dd>
+          <dd>
+            <blockquote dir="rtl" lang="ar-IQ">
+              <p>ما تبدي تخسر إلا لمن تبدي تستسلم</p>
+            </blockquote>
+            <p class="translation">Translation (Iraqi Arabic): "You only start losing when you start giving up."</p>
+          </dd>
+        </div>
+        <div class="member-card">
+          <dt>Rabie Abdullah <span class="student-id">106242400</span></dt>
+          <dd><strong>Contribution:</strong> Application page (apply.html) and its CSS, including form validation and
+            the Flexbox/Grid form layout.</dd>
+          <dd>
+            <blockquote dir="rtl" lang="ar-SY">
+              <p>ما كان لله بقى و اتصل، وما كان لغيره انقطع وانفصل</p>
+            </blockquote>
+            <p class="translation">Translation (Arabic): "Whatever is done for Allah stays and endures, and whatever is
+              done for other than Him cuts off and fades away."</p>
+          </dd>
+        </div>
+        <div class="member-card">
+          <dt>Khadija Boussaha <span class="student-id">106237257</span></dt>
+          <dd><strong>Contribution:</strong> About page (about.html): its content and structure, including the team
+            details, group photo and fun facts table, and the first draft of its CSS. Also set up and managed the team's
+            Jira board (epics, user stories, tasks and sprints).</dd>
+          <dd>
+            <blockquote dir="rtl" lang="ar-DZ">
+              <p>قريني وانا سيدك</p>
+            </blockquote>
+            <p class="translation">Translation (Algerian Arabic): "Teach me, and I will become your master." A student
+              who is taught well can one day surpass the teacher.</p>
+          </dd>
+        </div>
+        <div class="member-card">
+          <dt>Sara Kneina <span class="student-id">106214551</span></dt>
+          <dd><strong>Contribution:</strong> Shared CSS (styles.css) and the page-specific CSS files, the embedded and
+            inline CSS, GitHub repository setup and GitHub Pages deployment.</dd>
+          <dd>
+            <blockquote dir="rtl" lang="ar">
+              <p>وعسى أن تكرهوا شيئًا وهو خير لكم وعسى أن تحبوا شيئًا وهو شر لكم</p>
+            </blockquote>
+            <p class="translation">Translation (Arabic): "Perhaps you dislike something and it is good for you, and
+              perhaps you love something and it is bad for you." (<cite>Qur'an</cite>, Surah Al-Baqarah, 2:216)</p>
+          </dd>
+        </div>
+      </dl>
+    </section><!-- Group photo: FIGURE with caption, under 300KB (brief requirement) -->
+    <section aria-labelledby="photo-heading" class="content-section about-photo-section">
+      <h2 id="photo-heading">Our Team Photo</h2>
+      <figure class="group-photo">
+        <img alt="The five Smart Flow team members sitting around a table, working together on their laptops"
+          height="1200" src="images/group-photo.jpg" width="900" />
+        <!-- Inline CSS example (required on every page) -->
+        <figcaption style="font-style: italic;">The Smart Flow team (G02), October 2026.</figcaption>
+      </figure>
+    </section><!-- Fun facts: TABLE with caption; scope helps screen readers (brief requirement) -->
+    <section aria-labelledby="facts-heading" class="content-section about-facts-section">
+      <h2 id="facts-heading">Fun Facts</h2>
+      <div aria-labelledby="facts-caption" class="table-wrapper" role="region" tabindex="0">
+        <table class="fun-facts">
+          <caption id="facts-caption">Fun facts about each team member</caption>
+          <thead>
+            <tr>
+              <th scope="col">Member</th>
+              <th scope="col">Dream job</th>
+              <th scope="col">Favourite coding snack</th>
+              <th scope="col">Hometown</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Mohammed Sami Aljattal</th>
+              <td>Doctor (now studying cybersecurity instead!)</td>
+              <td>Chips and Coca-Cola</td>
+              <td>Doha, Qatar</td>
+            </tr>
+            <tr>
+              <th scope="row">Malik Al Badri</th>
+              <td>Chief AI security engineer</td>
+              <td>Grilled shrimp and coffee</td>
+              <td>Baghdad, Iraq</td>
+            </tr>
+            <tr>
+              <th scope="row">Rabie Abdullah</th>
+              <td>Leading a cybersecurity-oriented company</td>
+              <td>Strawberry milk and chips</td>
+              <td>Joulan, Syria</td>
+            </tr>
+            <tr>
+              <th scope="row">Khadija Boussaha</th>
+              <td>Still deciding, and keeping my options open!</td>
+              <td>Schweppes</td>
+              <td>Constantine, Algeria</td>
+            </tr>
+            <tr>
+              <th scope="row">Sara Kneina</th>
+              <td>Still exploring</td>
+              <td>Toblerone</td>
+              <td>Syria and Algeria</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section><!-- Acknowledgement of Country, explained in context (brief requirement) -->
+    <section aria-labelledby="country-heading" class="content-section acknowledgement about-country-section">
+      <h2 id="country-heading">Acknowledgement of Country</h2>
+      <p>
+        We respectfully acknowledge the Wurundjeri People of the Kulin Nation, the Traditional
+        Owners of the land on which Swinburne University of Technology's Australian campuses stand.
+        We pay our respects to their Elders past and present.
+      </p>
+      <h3>Why we included this</h3>
+      <p>
+        Our team studies a Swinburne course, so we wanted to recognise the Traditional Owners of the
+        land where our university began. An Acknowledgement of Country recognises Aboriginal and
+        Torres Strait Islander peoples as the Traditional Owners of the land and shows respect for
+        their continuing connection to Country (Reconciliation Australia, n.d.).
+      </p>
+      <p>
+        It also fits the company we designed. Smart city projects change how land, streets and public
+        spaces are used. Smart-flow therefore commits to:
+      </p>
+      <ul>
+        <li>talking with Traditional Owners early in every council project;</li>
+        <li>encouraging applications from Aboriginal and Torres Strait Islander peoples for all roles;</li>
+        <li>designing digital services that are accessible to everyone in the community.</li>
+      </ul>
+    </section><!-- Acknowledgements, GenAI credit and APA 7 references -->
+    <section aria-labelledby="credits-heading" class="content-section about-credits-section">
+      <h2 id="credits-heading">Acknowledgements and References</h2>
+      <p>Group photo: taken by the Smart Flow team. Used with the permission of all members.</p>
+      <!-- GenAI acknowledgement: the brief states that not crediting GenAI is plagiarism -->
+      <h3>Use of generative AI</h3>
+      <p>
+        We used Claude, an AI assistant made by Anthropic, mainly as a learning aid. It helped us understand the
+        assessment requirements,
+        explained how the code works, guided us through setting up VS Code, Jira and GitHub, and helped us identify and
+        fix mistakes.
+        We reviewed, modified and tested our work ourselves. The team members’ details, quotes and photo are our own.
+      </p>
+      <h3>References (APA 7)</h3>
+      <!-- APA 7: references listed in alphabetical order by author -->
+      <ul class="references">
+        <li>
+          Anthropic. (2026). <cite>Claude</cite> (Opus 5.5 version) [Large language model].
+          <a href="https://claude.ai">https://claude.ai</a>
+        </li>
+        <li>
+          Reconciliation Australia. (n.d.). <cite>Acknowledgement of Country and Welcome to Country</cite>.
+          <a
+            href="https://www.reconciliation.org.au/reconciliation/acknowledgement-of-country-and-welcome-to-country/">https://www.reconciliation.org.au/reconciliation/acknowledgement-of-country-and-welcome-to-country/</a>
+        </li>
+        <li>
+          Swinburne University of Technology. (n.d.). <cite>Acknowledgement of Country</cite>.
+          <a
+            href="https://www.swinburne.edu.au/about/strategy-initiatives/moondani-toombadool-centre/acknowledgement/">https://www.swinburne.edu.au/about/strategy-initiatives/moondani-toombadool-centre/acknowledgement/</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <!-- Shared footer with GitHub, Jira, live site and email links -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a class="footer-brand" href="index.html">Smart<span>-flow</span></a>
+      <p>© 2026 Smart-flow Pty Ltd. COS10026 Web Technology Project · Group G02.</p>
+      <ul class="footer-links">
+        <li><a href="jobs.html">Careers</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="https://github.com/106214551/Smart-flow" target="_blank" rel="noopener noreferrer">GitHub
+            repository</a></li>
+        <li><a href="https://boussahakhadija76.atlassian.net/jira/software/projects/SFG/boards/34" target="_blank"
+            rel="noopener noreferrer">Jira project</a></li>
+        <li><a href="https://106214551.github.io/Smart-flow/" target="_blank" rel="noopener noreferrer">Live site</a>
+        </li>
+        <li><a href="mailto:info@smart-flow.com.au">info@smart-flow.com.au</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>

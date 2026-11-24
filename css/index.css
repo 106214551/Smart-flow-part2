@@ -1,0 +1,134 @@
+/* ==========================================================================
+   Smart-flow | COS10026 Group G02 | index.css
+   
+   Author: Sara Kneina 106214551
+   
+   AI Acknowledgement: 
+   All core requirements taught in the unit were written by the user. 
+   Generative AI (Claude) was only used as a learning tool to explain 
+   advanced concepts (such as glassmorphism effects, backdrop-filters, 
+   and CSS Grid auto-fit). The AI did not write the code; it explained 
+   how the properties work, and the user implemented and tested them.
+
+   index.css | HOME PAGE ONLY (loaded after styles.css)
+   ========================================================================== */
+
+/* Hero: Grid with text on the left and the logo on the right.
+   The background graphic is pure CSS: layered soft glows + a gradient (no image file).
+   The glow behind the logo is a drop-shadow on .home-logo, so it always follows the logo. */
+
+.home-hero {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    /* fr units share the free space */
+    align-items: center;
+    gap: 1.5rem;
+    min-height: 26rem;
+    background-image:
+        radial-gradient(circle at 10% 15%, rgba(80, 205, 238, .30), transparent 16rem),
+        radial-gradient(circle at 25% 95%, rgba(0, 169, 165, .18), transparent 14rem),
+        linear-gradient(135deg, rgba(255, 255, 255, .75), rgba(217, 247, 245, .55));
+}
+
+.home-logo {
+    width: 100%;
+    max-width: 21rem;
+    margin-inline: auto;
+    border-radius: 1.5rem;
+    filter: drop-shadow(0 0 2.5rem rgba(0, 169, 165, .45)) drop-shadow(0 .9rem 1.2rem rgba(16, 43, 77, .1));
+}
+
+/* teal glow follows the logo */
+
+/* "What we do" cards: auto-fit makes 3 columns on desktop and 1 on phones,
+   so this grid needs no media query */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem;
+}
+
+.feature-card {
+    padding: 1.3rem;
+    border: 1px solid #fff;
+    border-radius: 1.1rem;
+    background: rgba(255, 255, 255, .75);
+    box-shadow: 0 .5rem 1.5rem rgba(20, 73, 111, .08);
+}
+
+.feature-icon {
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    border-radius: .9rem;
+    color: #fff;
+    background: linear-gradient(135deg, var(--teal), #087d9d);
+    transition: transform .3s ease;
+}
+
+.feature-icon svg {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+/* inline SVG icons */
+.feature-card:hover .feature-icon {
+    transform: scale(1.12) rotate(-4deg);
+}
+
+/* icon pops on hover */
+
+/* City banner picture */
+.city-banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    border-radius: 1.1rem;
+}
+
+/* height:auto keeps the whole picture at every screen size (no cropping) */
+
+/* Search box: label on top, input and button side by side (Flexbox) */
+.site-search {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+}
+
+.site-search label {
+    flex: 0 0 100%;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.site-search input {
+    flex: 1 1 15rem;
+    padding: .75rem 1rem;
+    border: 2px solid #b7d8e3;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .85);
+    font: inherit;
+}
+
+.site-search input:focus {
+    border-color: var(--teal);
+}
+
+/* Phones: stack the hero and shrink the logo */
+@media (max-width: 900px) {
+    .home-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .home-logo {
+        max-width: 14rem;
+    }
+
+    .home-hero .hero-actions {
+        justify-content: center;
+    }
+}

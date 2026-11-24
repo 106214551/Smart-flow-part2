@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Smart Flow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apply for a role at Smart-flow using our accessible online application form.">
+    <title>Apply | Smart-flow</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/apply.css">
+    <!-- Embedded CSS example: limited page-specific styling; shared styles stay external. -->
+    <style>
+        .application-form .eyebrow {
+            color: #087f88;
+        }
+
+        .application-form .form-help {
+            line-height: 1.5;
+        }
+
+        .form-note {
+            font-style: italic;
+            text-align: left;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header and Navigation -->
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="brand" href="index.html" aria-label="Smart-flow home">
+                <img src="images/smartflow.jpeg" alt="Smart-flow logo" width="54" height="54">
+                <span class="brand-copy"><strong>Smart<span>-flow</span></strong><small>Smarter Cities. Better
+                        Living.</small></span>
+            </a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="apply.html" class="active" aria-current="page">Apply</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-main">
+
+        <!-- Page hero / introduction -->
+        <section class="page-hero" aria-labelledby="apply-title">
+            <p class="eyebrow">TAKE THE NEXT STEP</p>
+            <h1 id="apply-title">Your future starts <span>here.</span></h1>
+            <p>Tell us a little about yourself and the role you’re interested in. Fields marked with an asterisk are
+                required.</p>
+        </section>
+
+        <section class="content-section" aria-labelledby="form-title">
+            <p class="eyebrow">APPLICATION FORM</p>
+            <h2 id="form-title">Let’s get to know you</h2>
+            <p class="form-help" style="margin-bottom: 1rem;">Please use accurate contact details. Your information will
+                be used for recruitment purposes.</p>
+            <p class="form-note">Fields marked with an <span style="color: #b3261e; font-weight: bold;">asterisk
+                    (*)</span> are required.</p>
+            <!-- Job application form -->
+            <form class="application-form" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+                <!-- Job reference and applicant name -->
+                <div class="form-field">
+                    <label for="jobref">Job Reference Number <span class="required-star">*</span></label>
+                    <input type="text" id="jobref" name="jobref" pattern="[A-Za-z0-9]{5}"
+                        title="Enter exactly 5 letters or digits" placeholder="e.g. AB123" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="firstname">First Name <span class="required-star">*</span></label>
+                    <input type="text" id="firstname" name="firstname" maxlength="20" pattern="[A-Za-z]+"
+                        title="Enter only letters, no spaces or numbers" placeholder="e.g. John" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="lastname">Last Name <span class="required-star">*</span></label>
+                    <input type="text" id="lastname" name="lastname" maxlength="20" pattern="[A-Za-z]+"
+                        title="Enter only letters, no spaces or numbers" placeholder="e.g. Smith" required>
+                </div>
+
+                <!-- Date of birth and gender -->
+                <div class="form-field">
+                    <label for="DOB">Date of Birth <span class="required-star">*</span></label>
+                    <input type="date" id="DOB" name="DOB" required>
+                </div>
+
+                <fieldset class="form-field full-width">
+                    <legend>Gender <span class="required-star">*</span></legend>
+                    <div class="radio-group">
+                        <div class="checkbox-item">
+                            <input type="radio" id="male" name="gender" value="male" required>
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="radio" id="female" name="gender" value="female" required>
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Address details -->
+                <div class="form-field">
+                    <label for="street">Street Address <span class="required-star">*</span></label>
+                    <input type="text" id="street" name="street" maxlength="40" placeholder="e.g. 123 Main Street"
+                        required>
+                </div>
+
+                <div class="form-field">
+                    <label for="suburb">Suburb/Town <span class="required-star">*</span></label>
+                    <input type="text" id="suburb" name="suburb" maxlength="40" placeholder="e.g. Melbourne" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="state">State <span class="required-star">*</span></label>
+                    <select id="state" name="state" required>
+                        <option value="" disabled selected>-- Select a state --</option>
+                        <option value="VIC">VIC</option>
+                        <option value="NSW">NSW</option>
+                        <option value="QLD">QLD</option>
+                        <option value="NT">NT</option>
+                        <option value="WA">WA</option>
+                        <option value="SA">SA</option>
+                        <option value="TAS">TAS</option>
+                        <option value="ACT">ACT</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="postcode">Postcode <span class="required-star">*</span></label>
+                    <input type="text" id="postcode" name="postcode" pattern="[0-9]{4}" title="Enter exactly 4 digits"
+                        placeholder="e.g. 3000" required>
+                </div>
+
+                <!-- Contact details -->
+                <div class="form-field">
+                    <label for="email">Email <span class="required-star">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="e.g. name@example.com" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="phone">Phone Number <span class="required-star">*</span></label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{8,12}" title="Enter 8 to 12 digits"
+                        placeholder="e.g. 0412345678" required>
+                </div>
+
+                <!-- Skills -->
+                <fieldset class="form-field full-width">
+                    <legend>Skills</legend>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="skill-gitv" name="skills" value="Git & Version Control">
+                            <label for="skill-gitv">Git & Version Control</label>
+                        </div>
+
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="skill-F/D" name="skills" value="Figma/Design Tools">
+                            <label for="skill-F/D">Figma/Design Tools</label>
+                        </div>
+
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="skill-dataviz" name="skills" value="Data Visualisation">
+                            <label for="skill-dataviz">Data Visualisation & Dashboards</label>
+                        </div>
+
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="skill-webdev" name="skills" value="Web Development">
+                            <label for="skill-webdev">Web Development (HTML/CSS/JS)</label>
+                        </div>
+
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="skill-transport" name="skills" value="Transport Planning">
+                            <label for="skill-transport">Transport & Mobility Planning</label>
+                        </div>
+
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="skill-energy" name="skills" value="Energy Systems">
+                            <label for="skill-energy">Energy Monitoring Systems</label>
+                        </div>
+
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="skill-stakeholder" name="skills" value="Stakeholder Engagement">
+                            <label for="skill-stakeholder">Council/Stakeholder Engagement</label>
+                        </div>
+
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="skill-Acc" name="skills" value="Web Accessibility (WCAG)">
+                            <label for="skill-Acc">Web Accessibility (WCAG)</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Other skills text area -->
+                <div class="form-field full-width">
+                    <label for="otherskills">Other Skills</label>
+                    <textarea id="otherskills" name="otherskills" rows="4" cols="50"
+                        placeholder="e.g. Project coordination, public speaking, data analysis software (SPSS, Tableau)"></textarea>
+                </div>
+                <!-- Submit button -->
+                <div class="form-field full-width">
+                    <button class="button button-primary full-width" type="submit">Submit application →</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <a class="footer-brand" href="index.html">Smart<span>-flow</span></a>
+            <p>&copy; 2026 Smart-flow Pty Ltd. COS10026 Web Technology Project · Group G02.</p>
+            <ul class="footer-links">
+                <li><a href="jobs.html">Careers</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="https://github.com/106214551/Smart-flow" target="_blank" rel="noopener noreferrer">GitHub
+                        repository</a></li>
+                <li><a href="https://boussahakhadija76.atlassian.net/jira/software/projects/SFG/boards/34"
+                        target="_blank" rel="noopener noreferrer">Jira project</a></li>
+                <li><a href="https://106214551.github.io/Smart-flow/" target="_blank" rel="noopener noreferrer">Live
+                        site</a></li>
+                <li><a href="mailto:info@smart-flow.com.au">info@smart-flow.com.au</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

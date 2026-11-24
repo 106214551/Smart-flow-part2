@@ -1,0 +1,140 @@
+/* ==========================================================================
+   Smart-flow | COS10026 Group G02 | about.css  (loaded after styles.css)
+   
+   Author: Sara Kneina 106214551
+   
+   AI Acknowledgement: 
+   All core requirements taught in the unit were written by the user. 
+   Generative AI (Claude) was only used as a learning tool to explain 
+   advanced concepts (such as glassmorphism effects, backdrop-filters, 
+   and CSS Grid auto-fit). The AI did not write the code; it explained 
+   how the properties work, and the user implemented and tested them.
+   ========================================================================== */
+
+/* Group details: nested list */
+.group-info {
+    padding-left: 1.2rem;
+}
+
+.group-info ul {
+    margin-top: .3rem;
+}
+
+/* Members: each definition-list entry becomes a glass card in a responsive grid */
+.members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1.25rem;
+    margin: 0;
+}
+
+.member-card {
+    padding: 1.25rem;
+    border: 1px solid #fff;
+    border-radius: 1.1rem;
+    background: rgba(255, 255, 255, .75);
+    box-shadow: 0 .5rem 1.5rem rgba(20, 73, 111, .08);
+}
+
+.member-card dt {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #102b4d;
+}
+
+.member-card dd {
+    margin: .6rem 0 0;
+}
+
+/* Styled student ID badge */
+.student-id {
+    display: inline-block;
+    margin-top: .3rem;
+    padding: .15rem .7rem;
+    border-radius: 999px;
+    background: #102b4d;
+    color: #ffffff;
+    font-size: .8rem;
+    letter-spacing: .08em;
+    transition: background .2s;
+}
+
+.member-card:hover .student-id {
+    background: #087f88;
+}
+
+/* Quotes: the border switches sides automatically for right-to-left Arabic text */
+blockquote {
+    margin: 0;
+    padding: .6rem 1rem;
+    border-inline-start: 4px solid #00a9a5;
+    background: #e8f8f7;
+    font-size: 1.1rem;
+}
+
+.translation {
+    color: #4f6a80;
+    font-style: italic;
+}
+
+/* Group photo: bordered figure */
+.group-photo {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: .6rem;
+    border: 4px solid #087f88;
+    border-radius: 1rem;
+    background: #ffffff;
+}
+
+.group-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: .5rem;
+}
+
+.group-photo figcaption {
+    padding-top: .6rem;
+    text-align: center;
+    color: #102b4d;
+}
+
+/* Fun-facts table: hex colours + row hover (base table styles are in styles.css) */
+.fun-facts caption {
+    color: #102b4d;
+}
+
+.fun-facts thead th {
+    background: #087f88;
+    color: #ffffff;
+}
+
+.fun-facts tbody tr:nth-child(even) {
+    background: #f0fafa;
+}
+
+.fun-facts tbody tr {
+    transition: background .2s, color .2s;
+}
+
+.fun-facts tbody tr:hover {
+    background: #087f88;
+    color: #ffffff;
+}
+
+/* white on #087f88 = 4.9:1 contrast */
+.fun-facts tbody tr:hover th {
+    color: #ffffff;
+}
+
+
+/* References: long web addresses wrap on phones instead of overflowing */
+.references {
+    padding-left: 1.2rem;
+    overflow-wrap: anywhere;
+}
+
+.references li {
+    margin-bottom: .6rem;
+}

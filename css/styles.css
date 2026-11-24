@@ -1,0 +1,454 @@
+/* ==========================================================================
+   Smart-flow | COS10026 Group G02 | styles.css
+   
+   Author: Sara Kneina 106214551
+   
+   AI Acknowledgement: 
+   All core requirements taught in the unit were written by the user. 
+   Generative AI (Claude) was only used as a learning tool to explain 
+   advanced concepts (such as glassmorphism effects, backdrop-filters, 
+   and CSS Grid auto-fit). The AI did not write the code; it explained 
+   how the properties work, and the user implemented and tested them.
+
+   styles.css  (SHARED STYLES)
+   Loaded on every page. Each page then loads its own small file:
+   index.css, jobs.css, apply.css or about.css.
+
+   Contents: 1 Colours and base | 2 Header and navigation | 3 Footer
+             4 Glass panels      | 5 Buttons | 6 Tables
+             7 Hover effects     | 8 Responsive | 9 Accessibility
+  */
+
+/* 1. COLOURS AND BASE ---------------------------------------------------- */
+/* Custom properties: change a colour here and the whole site updates */
+:root {
+    --navy: #102b4d;
+    /* logo navy */
+    --teal: #00a9a5;
+    /* logo teal */
+    --teal-dark: #087f88;
+    /* darker teal: passes contrast on white */
+    --text: #23415e;
+    --shadow: 0 1rem 2.5rem rgba(20, 73, 111, .14);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* padding and border stay inside the width */
+
+/* Background colour + background graphic made only from gradients */
+body {
+    margin: 0;
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    background:
+        radial-gradient(ellipse at 10% 5%, #ffffff, transparent 30rem),
+        linear-gradient(135deg, #d9f2ff, #a6e0f4 45%, #eafbf8);
+    background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--navy);
+}
+
+a {
+    color: var(--teal-dark);
+}
+
+a:hover {
+    color: var(--navy);
+}
+
+.container {
+    width: min(74rem, 92%);
+    margin-inline: auto;
+}
+
+/* centred page width */
+.page-main {
+    padding: 2rem 0 3rem;
+}
+
+.eyebrow {
+    margin: 0 0 .5rem;
+    color: var(--teal-dark);
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .17em;
+}
+
+/* 2. HEADER AND NAVIGATION (same on every page) -------------------------- */
+.site-header {
+    padding-top: 1.25rem;
+}
+
+.header-content {
+    display: flex;
+    /* Flexbox: logo left, menu right */
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: .75rem 1.25rem;
+    border: 1px solid rgba(255, 255, 255, .9);
+    border-radius: 999px;
+    background: rgba(240, 250, 255, .6);
+    box-shadow: 0 .75rem 2rem rgba(31, 101, 144, .13), inset 0 2px 2px #fff;
+    -webkit-backdrop-filter: blur(24px) saturate(150%);
+    backdrop-filter: blur(24px) saturate(150%);
+    /* the frosted-glass blur */
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    color: var(--navy);
+    text-decoration: none;
+}
+
+.brand img {
+    width: 3.4rem;
+    height: 3.4rem;
+    object-fit: contain;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.brand-copy {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.brand-copy strong {
+    font-size: 1.3rem;
+    letter-spacing: -.04em;
+}
+
+.brand-copy span,
+.footer-brand span {
+    color: var(--teal);
+}
+
+/* teal "-flow" */
+.brand-copy small {
+    color: #4f6a80;
+    font-size: .72rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links a {
+    display: block;
+    padding: .6rem 1.2rem;
+    border-radius: 999px;
+    color: var(--navy);
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .2s, background .2s;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, .75);
+    transform: translateY(-2px);
+}
+
+/* hover lift */
+.nav-links a.active {
+    color: #fff;
+    background: linear-gradient(135deg, #08aaa6, #087d9d);
+}
+
+/* current page */
+
+/* 3. FOOTER (Jira, GitHub, live site and email links live here) ---------- */
+.site-footer {
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, .7);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer-brand {
+    color: var(--navy);
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: .8rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 1.1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-links a {
+    color: var(--text);
+    font-size: .85rem;
+}
+
+/* 4. GLASS PANELS -------------------------------------------------------- */
+/* One shared "frosted glass" look for hero banners, sections and cards */
+.glass-panel,
+.content-section,
+.page-hero {
+    padding: clamp(1.25rem, 3vw, 2rem);
+    /* fluid padding */
+    border: 1px solid rgba(255, 255, 255, .85);
+    border-radius: 1.5rem;
+    background: rgba(255, 255, 255, .55);
+    box-shadow: var(--shadow), inset 0 1px 0 #fff;
+    -webkit-backdrop-filter: blur(22px) saturate(145%);
+    backdrop-filter: blur(22px) saturate(145%);
+}
+
+.content-section,
+.page-hero {
+    margin-bottom: 2rem;
+}
+
+.page-hero {
+    position: relative;
+    padding: clamp(2rem, 6vw, 4.5rem);
+}
+
+.page-hero h1 {
+    margin: .25rem 0 1rem;
+    font-size: clamp(2.3rem, 5.5vw, 4.4rem);
+    line-height: 1.05;
+    letter-spacing: -.05em;
+}
+
+.page-hero h1 span {
+    color: var(--teal);
+}
+
+.page-hero p:not(.eyebrow) {
+    max-width: 44rem;
+    font-size: 1.08rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-top: 1.5rem;
+}
+
+.closing-cta {
+    /* call-to-action band at the bottom of home and jobs */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    clear: both;
+    margin-bottom: 2rem;
+    background: linear-gradient(110deg, rgba(224, 247, 255, .9), rgba(168, 239, 232, .75));
+}
+
+.closing-cta h2 {
+    margin: 0;
+}
+
+.closing-cta p:not(.eyebrow) {
+    margin: .4rem 0 0;
+}
+
+/* Shared acknowledgement accent used on the home and about pages */
+.acknowledgement {
+    border-left: 8px solid var(--teal);
+}
+
+/* 5. BUTTONS ------------------------------------------------------------- */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    min-height: 2.9rem;
+    padding: .7rem 1.4rem;
+    border: 1px solid #fff;
+    border-radius: 999px;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.button-primary {
+    color: #fff;
+    background: linear-gradient(180deg, #54e0e2, #0cb9c2 50%, #0798b2);
+    box-shadow: 0 .5rem 1.2rem rgba(0, 154, 183, .25);
+}
+
+.button-quiet {
+    color: var(--navy);
+    background: rgba(255, 255, 255, .5);
+}
+
+.button-light {
+    color: var(--navy);
+    background: linear-gradient(180deg, #fff, #d9f7ff);
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 .8rem 1.6rem rgba(0, 139, 166, .3);
+}
+
+.button-primary:hover {
+    color: #fff;
+}
+
+/* 6. TABLES (home impact table + about fun-facts table) ------------------ */
+.table-wrapper {
+    overflow-x: auto;
+    border: 1px solid #a9c7d0;
+    border-radius: .9rem;
+    background: #fff;
+}
+
+/* scrolls on phones */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    padding: 1rem;
+    color: var(--navy);
+    font-weight: 800;
+    text-align: left;
+}
+
+th,
+td {
+    padding: .8rem 1rem;
+    border: 1px solid #d5e5e9;
+    text-align: left;
+}
+
+thead th {
+    color: #fff;
+    background: var(--teal-dark);
+}
+
+tbody tr:nth-child(even) {
+    background: #f0fafa;
+}
+
+/* zebra stripes */
+tbody tr:hover {
+    background: #d7f4ef;
+}
+
+/* 7. HOVER EFFECTS: cards float up and glow teal ------------------------- */
+.feature-card,
+.job-card,
+.member-card {
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.feature-card:hover,
+.job-card:hover,
+.member-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--teal);
+    box-shadow: 0 1rem 2.2rem rgba(0, 169, 165, .25);
+}
+
+/* 8. RESPONSIVE: tablet, then phone -------------------------------------- */
+@media (max-width: 900px) {
+    .header-content {
+        justify-content: center;
+        border-radius: 2rem;
+    }
+
+    .page-hero::after {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 94%;
+    }
+
+    .nav-links a {
+        padding: .5rem .9rem;
+        font-size: .9rem;
+    }
+
+    .brand-copy small {
+        display: none;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+}
+
+/* 9. ACCESSIBILITY ------------------------------------------------------- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #125d9b;
+    outline-offset: 3px;
+}
+
+/* visible keyboard focus */
+
+@media (prefers-reduced-motion: reduce) {
+
+    /* respect users who dislike movement */
+    * {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+
+    .feature-card:hover,
+    .job-card:hover,
+    .member-card:hover,
+    .button:hover,
+    .nav-links a:hover {
+        transform: none;
+    }
+}

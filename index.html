@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--
+  Smart-flow | COS10026 Applied Web Project Part 1 | Group G02
+  Page: index.html (Home)
+  Styling: styles.css (shared) + index.css (this page), plus one embedded and one inline CSS example.
+  ACKNOWLEDGEMENTS: Content and design decisions were made by the team. Generative AI (Claude, by Anthropic)
+  was used to help write and explain CSS and to review the HTML; all output was checked and edited by the team.
+  Sources: Acknowledgement of Country wording follows the Wurundjeri wording used on about.html.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Smart-flow builds smarter city infrastructure through connected transport, energy monitoring and urban services.">
+    <meta name="keywords"
+        content="Smart-flow, smart city, infrastructure, transport, energy monitoring, urban services, careers">
+    <meta name="author" content="Group G02">
+    <title>Home | Smart-flow</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Embedded CSS example: limited page-specific styling; shared styles stay external. -->
+    <style>
+        .home-hero .hero-copy {
+            position: relative;
+            z-index: 1;
+        }
+
+        .home-hero .eyebrow {
+            letter-spacing: .2em;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="brand" href="index.html" aria-label="Smart-flow home">
+                <img src="images/smartflow-edited.png" alt="Smart-flow logo" width="54" height="54">
+                <span class="brand-copy"><strong>Smart<span>-flow</span></strong><small>Smarter Cities. Better
+                        Living.</small></span>
+            </a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="apply.html">Apply</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container page-main">
+
+        <!-- Background graphic: layered CSS gradients on .home-hero (see index.css). -->
+        <section class="page-hero home-hero">
+            <div class="hero-copy">
+                <p class="eyebrow">SMART CITY INFRASTRUCTURE</p>
+                <h1>Smarter cities.<br><span>Better living.</span></h1>
+                <p>We connect the systems that help cities move, use energy wisely and deliver better everyday services
+                    to their communities.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="jobs.html">Explore careers <span
+                            aria-hidden="true">↗</span></a>
+                    <a class="button button-quiet" href="about.html">Meet Smart-flow</a>
+                </div>
+            </div>
+            <img class="home-logo" src="images/smartflow-edited.png" alt="Smart-flow abstract teal and navy S logo"
+                style="margin-block: .5rem;">
+        </section>
+
+        <section class="content-section" aria-labelledby="focus-title">
+            <p class="eyebrow">WHAT WE DO</p>
+            <h2 id="focus-title">Infrastructure for a more connected future</h2>
+            <p>Our work brings technology and practical city planning together, helping councils make better-informed
+                decisions and improve urban experiences.</p>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" focusable="false">
+                            <rect x="4" y="3" width="16" height="14" rx="3" />
+                            <path d="M4 11h16M8 21v-4M16 21v-4" />
+                            <path d="M8 14h.01M16 14h.01" />
+                        </svg></div>
+                    <h3>Smart transport</h3>
+                    <p>Connected tools that make transport information easier to understand and use.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" focusable="false">
+                            <path d="M13 2 4 14h7l-1 8 9-12h-7z" />
+                        </svg></div>
+                    <h3>Energy monitoring</h3>
+                    <p>Clearer energy insights to support efficient, responsible infrastructure.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" focusable="false">
+                            <path d="M3 21h18M5 21V8l6-4v17M11 21V11h8v10M8 11h.01M8 15h.01M15 14h.01M15 18h.01" />
+                        </svg></div>
+                    <h3>Urban services</h3>
+                    <p>Digital services that help communities and local teams work better together.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="page-hero" aria-labelledby="city-title">
+            <p class="eyebrow">DESIGNED AROUND PEOPLE</p>
+            <h2 id="city-title">Technology with the city in mind.</h2>
+            <p>From transport networks to energy data, Smart-flow focuses on making complex systems feel simple, useful
+                and accessible.</p>
+            <img class="city-banner" src="images/smartflow-city-banner.png" width="1983" height="793"
+                alt="Illustration of a connected modern city with public transport, buildings and waterways">
+        </section>
+
+        <section class="closing-cta glass-panel" aria-labelledby="home-cta-title">
+            <div>
+                <p class="eyebrow">BUILD WHAT COMES NEXT</p>
+                <h2 id="home-cta-title">Want to make an impact?</h2>
+                <p>Explore our open roles and discover how your skills can help shape better city experiences.</p>
+            </div>
+            <a class="button button-light" href="jobs.html">View open positions <span aria-hidden="true">→</span></a>
+        </section>
+
+        <section class="content-section" aria-labelledby="site-search-title">
+            <p class="eyebrow">QUICK SEARCH</p>
+            <h2 id="site-search-title">Find a role or solution</h2>
+            <form class="site-search" action="jobs.html" method="get" role="search">
+                <label for="site-search-query">Search jobs and services</label>
+                <input id="site-search-query" name="q" type="search" placeholder="Try transport, energy or design">
+                <button class="button button-primary" type="submit">Search</button>
+            </form>
+        </section>
+        <section class="content-section" aria-labelledby="impact-table-title">
+            <p class="eyebrow">OUR APPROACH</p>
+            <h2 id="impact-table-title">How our work creates impact</h2>
+            <div class="table-wrapper" tabindex="0" role="region" aria-label="Smart-flow solutions and benefits">
+                <table>
+                    <caption>Overview of Smart-flow solutions, focus areas and expected benefits</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" rowspan="2">Solution</th>
+                            <th scope="colgroup" colspan="2">Our impact</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Focus</th>
+                            <th scope="col">Expected benefit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Smart transport</th>
+                            <td>Connected transport and traffic data</td>
+                            <td>More efficient journeys</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Energy monitoring</th>
+                            <td>Energy use and resource tracking</td>
+                            <td>Reduced waste and better resource use</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Urban services</th>
+                            <td>Digital infrastructure systems</td>
+                            <td>Improved public services</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Acknowledgement of Country: supports Aboriginal and Torres Strait Islander peoples (brief requirement) -->
+        <section class="content-section acknowledgement" aria-labelledby="country-title">
+            <p class="eyebrow">RESPECT FOR COUNTRY</p>
+            <h2 id="country-title">Acknowledgement of Country</h2>
+            <p>Smart-flow acknowledges the Wurundjeri People of the Kulin Nation as the Traditional Owners of the land
+                on which our Melbourne team works. We pay our respects to their Elders past and present, and to all
+                Aboriginal and Torres Strait Islander peoples.</p>
+            <p>We include this because the cities we help to design and connect are built on First Nations land. We aim
+                to build infrastructure that serves every community fairly, and we encourage applications from
+                Aboriginal and Torres Strait Islander peoples for the <a href="jobs.html">roles on our careers page</a>.
+            </p>
+        </section>
+
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <a class="footer-brand" href="index.html">Smart<span>-flow</span></a>
+            <p>&copy; 2026 Smart-flow Pty Ltd. COS10026 Web Technology Project · Group G02.</p>
+            <ul class="footer-links">
+                <li><a href="jobs.html">Careers</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="https://github.com/106214551/Smart-flow" target="_blank" rel="noopener noreferrer">GitHub
+                        repository</a></li>
+                <li><a href="https://boussahakhadija76.atlassian.net/jira/software/projects/SFG/boards/34"
+                        target="_blank" rel="noopener noreferrer">Jira project</a></li>
+                <li><a href="https://106214551.github.io/Smart-flow/" target="_blank" rel="noopener noreferrer">Live
+                        site</a></li>
+                <li><a href="mailto:info@smart-flow.com.au">info@smart-flow.com.au</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
