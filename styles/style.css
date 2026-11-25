@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Smart-flow | COS10026 Group G02 | styles.css
+   Smart-flow | COS10026 Group G02 | style.css
    
    Author: Sara Kneina 106214551
    
@@ -10,7 +10,7 @@
    and CSS Grid auto-fit). The AI did not write the code; it explained 
    how the properties work, and the user implemented and tested them.
 
-   styles.css  (SHARED STYLES)
+   style.css  (SHARED STYLES)
    Loaded on every page. Each page then loads its own small file:
    index.css, jobs.css, apply.css or about.css.
 
@@ -451,4 +451,21 @@ summary:focus-visible {
     .nav-links a:hover {
         transform: none;
     }
+}
+/* 10. SKIP LINK (Part 2) ------------------------------------------------- */
+/* header.inc adds a "Skip to main content" link to every page. It stays off screen
+   until a keyboard user tabs to it. */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    z-index: 100;
+    padding: .5rem 1rem;
+    background: #ffffff;
+    color: var(--navy);
+    border-radius: .5rem;
 }

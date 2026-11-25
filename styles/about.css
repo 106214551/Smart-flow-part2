@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Smart-flow | COS10026 Group G02 | about.css  (loaded after styles.css)
+   Smart-flow | COS10026 Group G02 | about.css  (loaded after style.css)
    
    Author: Sara Kneina 106214551
    
@@ -100,7 +100,7 @@ blockquote {
     color: #102b4d;
 }
 
-/* Fun-facts table: hex colours + row hover (base table styles are in styles.css) */
+/* Fun-facts table: hex colours + row hover (base table styles are in style.css) */
 .fun-facts caption {
     color: #102b4d;
 }

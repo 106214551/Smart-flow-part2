@@ -10,7 +10,7 @@
    and CSS Grid auto-fit). The AI did not write the code; it explained 
    how the properties work, and the user implemented and tested them.
 
-   index.css | HOME PAGE ONLY (loaded after styles.css)
+   index.css | HOME PAGE ONLY (loaded after style.css)
    ========================================================================== */
 
 /* Hero: Grid with text on the left and the logo on the right.
